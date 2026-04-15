@@ -104,10 +104,9 @@ Read and complete `model_card.md`:
 
 [**Model Card**](model_card.md)
 
-Write 1 to 2 paragraphs here about what you learned:
+Recommenders turn data into predictions by comparing numbers. My system gives each song a score based on how close its energy and danceability are to what a user wants, then adds bonus points for genre and mood matches. That is it. There is no understanding of lyrics, context, or emotion — just arithmetic. But when you format the output cleanly and print a reason for each recommendation, it feels surprisingly personal. The explanation does most of the work; the math just produces the ranking.
 
-- about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
+Bias shows up quietly. My catalog has three lofi songs and one jazz song, which means a lofi fan has three chances to earn the genre bonus while a jazz fan has one. A user who prefers "sad" music gets zero mood bonuses because no songs in the catalog have that mood. The system never warns about this — it just returns five songs and prints scores, which makes the problem invisible unless you specifically test edge cases. That taught me that unfairness in AI systems is often a data problem, not a logic problem, and it can be hard to spot without deliberately trying to break the system.
 
 
 ---
