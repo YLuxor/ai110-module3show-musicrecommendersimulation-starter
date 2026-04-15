@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ':*)",
+      "Bash(py -c ':*)",
+      "Bash(py main.py)",
+      "Bash(py src/main.py)",
+      "Bash(py -m src.main)"
+    ]
+  }
+}

@@ -12,6 +12,7 @@ Your goal is to:
 - Reflect on how this mirrors real world AI recommenders
 
 Replace this paragraph with your own summary of what your version does.
+ANS: A content-based music recommender that translates musical attributes into a searchable data format. My version uses a weighted scoring algorithm to compare a catalog of songs against a specific user "taste profile" dictionary. By assigning point values to genre matches, mood alignment, and energy proximity, the system mathematically identifies the best matches within the library. This simulation explores the balance between strict data matching and flexible "vibes," mirroring how real-world AI platforms like Spotify prioritize specific features to personalize user feeds.
 
 ---
 
@@ -28,6 +29,7 @@ Some prompts to answer:
 - How do you choose which songs to recommend
 
 You can include a simple diagram or bullet list if helpful.
+ANS: My music recommender uses a weighted point-scoring system to rank songs based on a user's taste profile. The system evaluates every track in a 20-song catalog by comparing its attributes to a target profile, awarding 1.5 points for an exact genre match, 1.0 point for a mood match, and up to 10.0 points based on the similarity of numeric features like energy and danceability. This approach ensures that while general "vibes" (mood and energy) are considered, the system remains slightly biased toward a user's long-term genre preferences to maintain consistency. The final output is a sorted list where the user is presented with the top 5 highest-scoring recommendations that align most closely with their defined preferences.
 
 ---
 
@@ -63,6 +65,12 @@ pytest
 ```
 
 You can add more tests in `tests/test_recommender.py`.
+
+---
+
+## Sample Output
+
+![Top 5 Music Recommendations in the terminal](docs/terminal-output.png)
 
 ---
 
